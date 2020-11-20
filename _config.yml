@@ -3,3 +3,10 @@ title: title
 description: description
 github:
     is_project_page: false
+author:
+- name: Xinlei Pan
+  affiliation: UC Berkeley
+  email: xinleipan@berkeley.edu
+- name: Xinlei Pan
+  affiliation: UC Berkeley
+  email: xinleipan@berkeley.edu
