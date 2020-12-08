@@ -218,33 +218,25 @@
       </div>
       <br><hr>
 
-      <center><h1>Hand Morphology Design</h1></center>
+      <center><h1>Overview of the Algorithm</h1></center>
       <div style="width:800px; margin:0 auto; text-align=right">
+        We jointly optimize the hand design and the control policy to solve diverse object grasping tasks. With representation learning of the design parameters in a latent space, our Bayesian optimizer (LABO) finds a robust and cost-efficient hand design for various grasp types.
         The hand morphology design optimization includes 185 parameters, where 63 dimensions are used for controlling the hand grasping behavior and the other 122 dimensions are for specifying the structure design and physical property of the hand.
       </div>
       <table align="center" width="800px"><tbody><tr><td width="800px">
-      <center><a href="resources/teaser.gif"><img src = "resources/teaser.gif" width="600px" ></img></a><br></center>
+      <center><a href="resources/teaser.gif"><img src = "resources/teaser.png" width="600px" ></img></a><br></center>
       </td></tr></tbody></table>
       <hr>
 
 
-      <center><h1>Overview of the Algorithm</h1></center>
+      <center><h1>Latent Space Bayesian Optimization</h1></center>
       <div style="width:800px; margin:0 auto; text-align=right">
-        Our method expresses agents as collections of modular components that use a shared control policy. Multiple agent controllers (left) are trained simultaneously with locally communicating modules with shared parameters (center). These modules learn to pass messages to local neighbors (right).
+        The hand morphology design optimization includes 185 parameters, where 63 dimensions are used for controlling the hand grasping behavior and the other 122 dimensions are for specifying the structure design and physical property of the hand. Due to the high dimensionality of the optimization space, it is critical to use efficient representation learning to reduce the optimization space. We learn a representation learning module, consisting of the encoder, decoder, and predictor to cast raw morphology and control parameters into a latent representation. Then we perform Bayesian optimization in the latent space. We rely on simulated grasp trials to evaluate the generated hand morphology and control on success metrics.
       </div>
       <table align="center" width="800px"><tbody><tr><td width="800px">
       <center><a href="resources/method.png"><img src = "resources/method.png" width="800px"></img></a><br></center>
       </td></tr></tbody></table>
       <br/><hr>
-
-
-            <center id="sourceCode"><h1>Source Code</h1></center>
-            <div style="width:650px; margin:0 auto; text-align=right">
-            We have released our implementation in PyTorch on the github page. Try our code!
-            <center><span style="font-size:28px"><a href='https://github.com/huangwl18/modular-rl'>[GitHub]</a></span></center>
-            </div>
-            <br><hr>
-
             </table>
           <br><hr>
 
